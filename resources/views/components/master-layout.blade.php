@@ -30,15 +30,15 @@
 				<div class="sidebar-user">
 					<img src="{{asset('/assets/img/avatars/avatar.jpg')}}" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
 					<div class="fw-bold">Linda Miller</div>
-					<small>Front-end Developer</small>
+					<small></small>
 				</div>
 				<ul class="sidebar-nav">
 					<li class="sidebar-header">
-						Main
+						Menu
 					</li>
 					<li class="sidebar-item">
 						<a data-bs-target="#dashboards" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Dashboards</span>
+							<i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Menu Principal</span>
 						</a>
 						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-default.html">Default</a></li>
@@ -48,23 +48,16 @@
 					</li>
 					<li class="sidebar-item active">
 						<a data-bs-target="#pages" data-bs-toggle="collapse" class="sidebar-link">
-							<i class="align-middle me-2 fas fa-fw fa-file"></i> <span class="align-middle">Pages</span>
+							<i class="align-middle me-2 fas fa-fw fa-file"></i> <span class="align-middle">Paginas</span>
 						</a>
 						<ul id="pages" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clients <span
-										class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-invoice.html">Invoice</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-pricing.html">Pricing</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-tasks.html">Tasks</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-chat.html">Chat <span
-										class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
-							<li class="sidebar-item active"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Productos</a></li>
 						</ul>
 					</li>
 					<li class="sidebar-item">
 						<a data-bs-target="#auth" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-sign-in-alt"></i> <span class="align-middle">Auth</span>
+							<i class="align-middle me-2 fas fa-fw fa-sign-in-alt"></i> <span class="align-middle">Autorización</span>
 						</a>
 						<ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Sign
@@ -78,29 +71,6 @@
 									Page</a></li>
 						</ul>
 					</li>
-					<li class="sidebar-header">
-						Elements
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#ui" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-flask"></i> <span class="align-middle">User Interface</span>
-						</a>
-						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-grid.html">Grid</a>
-							</li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-modals.html">Modals</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-offcanvas.html">Offcanvas</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-placeholders.html">Placeholders</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-notifications.html">Notifications</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a>
-							</li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
-						</ul>
-					</li>	
 				</ul>
 			</div>
 		</nav>
@@ -110,75 +80,10 @@
 					<i class="hamburger align-self-center"></i>
 				</a>
 				<form class="d-none d-sm-inline-block">
-					<input class="form-control form-control-lite" type="text" placeholder="Search projects...">
+					{{-- <input class="form-control form-control-lite" type="text" placeholder="Search projects..."> --}}
 				</form>
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav ms-auto">
-						<li class="nav-item dropdown active">
-							<a class="nav-link dropdown-toggle position-relative" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
-								<i class="align-middle fas fa-envelope-open"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-								<div class="dropdown-menu-header">
-									<div class="position-relative">
-										4 New Messages
-									</div>
-								</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="{{asset('/assets/img/avatars/avatar-5.jpg')}}" class="avatar img-fluid rounded-circle" alt="Michelle Bilodeau">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Michelle Bilodeau</div>
-												<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-												<div class="text-muted small mt-1">5m ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="{{asset('/assets/img/avatars/avatar-3.jpg')}}" class="avatar img-fluid rounded-circle" alt="Kathie Burton">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Kathie Burton</div>
-												<div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-												<div class="text-muted small mt-1">30m ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="{{asset('/assets/img/avatars/avatar-2.jpg')}}" class="avatar img-fluid rounded-circle" alt="Alexander Groves">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Alexander Groves</div>
-												<div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a>
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="{{asset('/assets/img/avatars/avatar-4.jpg')}}" class="avatar img-fluid rounded-circle" alt="Daisy Seger">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Daisy Seger</div>
-												<div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all messages</a>
-								</div>
-							</div>
-						</li>
 						<li class="nav-item dropdown ms-lg-2">
 							<a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
 								<i class="align-middle fas fa-bell"></i>
@@ -269,16 +174,13 @@
 						<div class="col-8 text-start">
 							<ul class="list-inline">
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
+									<a class="text-muted" href="#">Soporte</a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
+									<a class="text-muted" href="#">Privacidad</a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms of Service</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Contact</a>
+									<a class="text-muted" href="#">Contacto</a>
 								</li>
 							</ul>
 						</div>
