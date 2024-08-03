@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Modern, flexible and responsive Bootstrap 5 admin &amp; dashboard template">
 	<meta name="author" content="Bootlab">
 	<title>Template WebTech</title>
 	<style>
@@ -13,8 +11,8 @@
 			opacity: 0;
 		}
 	</style>
-	<link href="{{asset('css/modern.css')}}" rel="stylesheet">
-	<script src="{{asset('js/settings.js')}}"></script>
+	<link href="{{asset('/assets/css/modern.css')}}" rel="stylesheet">
+	<script src="{{asset('/assets/js/settings.js')}}"></script>
 </head>
 <body>
 	<div class="splash active">
@@ -26,11 +24,11 @@
 				<svg>
 					<use xlink:href="#ion-ios-pulse-strong"></use>
 				</svg>
-				Spark
+				WebTech
 			</a>
 			<div class="sidebar-content">
 				<div class="sidebar-user">
-					<img src="{{asset('img/avatars/avatar.jpg')}}" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
+					<img src="{{asset('/assets/img/avatars/avatar.jpg')}}" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
 					<div class="fw-bold">Linda Miller</div>
 					<small>Front-end Developer</small>
 				</div>
@@ -102,89 +100,7 @@
 							</li>
 							<li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
 						</ul>
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#charts" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-chart-pie"></i> <span class="align-middle">Charts</span>
-							<span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-						</a>
-						<ul id="charts" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">Chart.js</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">ApexCharts</a></li>
-						</ul>
-					</li>
-
-					<li class="sidebar-item">
-						<a data-bs-target="#forms" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-check-square"></i> <span class="align-middle">Forms</span>
-						</a>
-						<ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Layouts</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-basic-elements.html">Basic Elements</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-advanced-elements.html">Advanced Elements</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-floating-labels.html">Floating Labels</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-input-groups.html">Input Groups</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-editors.html">Editors</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-validation.html">Validation</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="forms-wizard.html">Wizard</a></li>
-						</ul>
-					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="tables-bootstrap.html">
-							<i class="align-middle me-2 fas fa-fw fa-list"></i> <span class="align-middle">Tables</span>
-						</a>
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#datatables" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-table"></i> <span class="align-middle">DataTables</span>
-						</a>
-						<ul id="datatables" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-responsive.html">Responsive Table</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-buttons.html">Table with Buttons</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-column-search.html">Column Search</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-fixed-header.html">Fixed Header</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-multi.html">Multi Selection</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-ajax.html">Ajax Sourced Data</a></li>
-						</ul>
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#icons" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-heart"></i> <span class="align-middle">Icons</span>
-						</a>
-						<ul id="icons" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="icons-feather.html">Feather</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="icons-ion.html">Ion
-									Icons</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="icons-font-awesome.html">Font Awesome</a></li>
-						</ul>
-					</li>
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="calendar.html">
-							<i class="align-middle me-2 far fa-fw fa-calendar-alt"></i> <span class="align-middle">Calendar</span>
-						</a>
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#maps" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-map-marker-alt"></i> <span class="align-middle">Maps</span>
-						</a>
-						<ul id="maps" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="maps-google.html">Google Maps</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="maps-vector.html">Vector Maps</a></li>
-						</ul>
-					</li>
-					<li class="sidebar-header">
-						Extras
-					</li>
-					<li class="sidebar-item">
-						<a data-bs-target="#documentation" data-bs-toggle="collapse" class="sidebar-link collapsed">
-							<i class="align-middle me-2 fas fa-fw fa-book"></i> <span class="align-middle">Documentation</span>
-						</a>
-						<ul id="documentation" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="docs-getting-started.html">Getting Started</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="docs-plugins.html">Plugins</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="docs-changelog.html">Changelog</a></li>
-						</ul>
-					</li>
+					</li>	
 				</ul>
 			</div>
 		</nav>
@@ -212,7 +128,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="{{asset('img/avatars/avatar-5.jpg')}}" class="avatar img-fluid rounded-circle" alt="Michelle Bilodeau">
+												<img src="{{asset('/assets/img/avatars/avatar-5.jpg')}}" class="avatar img-fluid rounded-circle" alt="Michelle Bilodeau">
 											</div>
 											<div class="col-10 ps-2">
 												<div class="text-dark">Michelle Bilodeau</div>
@@ -224,7 +140,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="{{asset('img/avatars/avatar-3.jpg')}}" class="avatar img-fluid rounded-circle" alt="Kathie Burton">
+												<img src="{{asset('/assets/img/avatars/avatar-3.jpg')}}" class="avatar img-fluid rounded-circle" alt="Kathie Burton">
 											</div>
 											<div class="col-10 ps-2">
 												<div class="text-dark">Kathie Burton</div>
@@ -236,7 +152,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="{{asset('img/avatars/avatar-2.jpg')}}" class="avatar img-fluid rounded-circle" alt="Alexander Groves">
+												<img src="{{asset('/assets/img/avatars/avatar-2.jpg')}}" class="avatar img-fluid rounded-circle" alt="Alexander Groves">
 											</div>
 											<div class="col-10 ps-2">
 												<div class="text-dark">Alexander Groves</div>
@@ -248,7 +164,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
 											<div class="col-2">
-												<img src="{{asset('img/avatars/avatar-4.jpg')}}" class="avatar img-fluid rounded-circle" alt="Daisy Seger">
+												<img src="{{asset('/assets/img/avatars/avatar-4.jpg')}}" class="avatar img-fluid rounded-circle" alt="Daisy Seger">
 											</div>
 											<div class="col-10 ps-2">
 												<div class="text-dark">Daisy Seger</div>
@@ -368,7 +284,7 @@
 						</div>
 						<div class="col-4 text-end">
 							<p class="mb-0">
-								&copy; 2023 - <a href="dashboard-default.html" class="text-muted">Spark</a>
+								&copy; 2024 - <a href="dashboard-default.html" class="text-muted">WebTech</a>
 							</p>
 						</div>
 					</div>
@@ -385,7 +301,7 @@
 			</symbol>
 		</defs>
 	</svg>
-	<script src="{{asset('../js/app.js')}}"></script>
+	<script src="{{asset('/assets/js/app.js')}}"></script>
 </body>
 
 </html>
