@@ -10,7 +10,7 @@ class ProductoController extends Controller
 {
     public function index() : View
     {
-        $productos = Producto::orderBy('pro_nombre')->paginate(5);
+        $productos = Producto::orderBy('pro_nombre')->paginate(15);
         return view('producto.index', compact('productos'));
     }
 }

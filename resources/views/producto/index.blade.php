@@ -54,26 +54,26 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Responsive DataTables</h5>
-                    <h6 class="card-subtitle text-muted">Highly flexible tool that many advanced features to any HTML table. See official
-                        documentation <a href="https://datatables.net/extensions/responsive/" target="_blank"
-                            rel="noopener noreferrer nofollow">here</a>.</h6>
+                    <h5 class="card-title"></h5>
+                    <h6 class="card-subtitle text-muted"></h6>
                 </div>
                 <div class="card-body">
                     <table id="datatables-reponsive" class="table table-striped" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>Producto</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($productos as $producto)
                                 <tr>
                                     <td>{{ $producto->pro_nombre }}</td>
+                                    <td>{{ $producto->pro_detalle }}</td>
                                     {{-- <td>{{ $producto->nombre }}</td>
                                     <td>{{ $producto->descripcion }}</td>
                                     <td>{{ $producto->precio }}</td> --}}
-                                    <td>
+                                    {{-- <td> --}}
                                         {{-- <a href="{{ route('productos.show', $producto) }}" class="btn btn-info">Ver</a>
                                         <a href="{{ route('productos.edit', $producto) }}" class="btn btn-warning">Editar</a>
                                         <form action="{{ route('productos.destroy', $producto) }}" method="POST" class="d-inline">
@@ -81,7 +81,7 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Eliminar</button>
                                         </form> --}}
-                                    </td>
+                                    {{-- </td> --}}
                                 </tr>
                             @endforeach
                         </tbody>
