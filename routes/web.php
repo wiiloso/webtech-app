@@ -3,8 +3,17 @@
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
-use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\UserController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('roles', RoleController::class);
+    Route::resource('permissions', PermissionController::class);
+    Route::resource('users', UserController::class);
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/index', function () {
     return view('index');
-}); 
+});
 Route::resource('tests', TestController::class);
 // Route::get('productos', function () {
 //     return redirect('productos/index');
@@ -30,4 +39,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
