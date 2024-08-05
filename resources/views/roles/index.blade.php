@@ -10,7 +10,7 @@
             <h1>Roles</h1>
             <a href="{{ route('roles.create') }}" class="btn btn-primary mb-3">Crear Rol</a>
             <div class="table-responsive">
-                <table class="table table-bordered table-striped">
+                <table id="datatables-reponsive" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -25,7 +25,8 @@
                                 <td>{{ $role->name }}</td>
                                 <td>
                                     <a href="{{ route('roles.edit', $role->id) }}" class="btn btn-warning">Editar</a>
-                                    <form action="{{ route('roles.destroy', $role->id) }}" method="POST" style="display:inline;">
+                                    <form action="{{ route('roles.destroy', $role->id) }}" method="POST"
+                                        style="display:inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -38,4 +39,12 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Datatables Responsive
+            $("#datatables-reponsive").DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </x-master-layout>
