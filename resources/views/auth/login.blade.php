@@ -45,7 +45,7 @@
                             <div class="card-body">
                                 <div class="m-sm-4">
                                     <div class="text-center">
-                                        <img src="img/avatars/icons8-usuario-masculino-en-círculo-94.png"
+                                        <img src="img/avatars/user.png"
                                             alt="Linda Miller" class="img-fluid rounded-circle" width="132"
                                             height="132" />
                                     </div>

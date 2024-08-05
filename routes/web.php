@@ -22,6 +22,11 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/tester', function () {
+    return view('tester');
+});
+
 Route::resource('tests', TestController::class);
 // Route::get('productos', function () {
 //     return redirect('productos/index');
