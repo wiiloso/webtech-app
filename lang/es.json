@@ -225,6 +225,9 @@
     "Password": "Contraseña",
     "Sign in to your account to continue": "Ingresar en su cuenta para continuar",
     "Permissions": "Permisos",
-    "List permissions": "Listar Permisos"
+    "List permissions": "Listar Permisos",
+    "Create permission": "Crear Permiso",
+    "Edit permission": "Editar Permiso",
+    "Permission name": "Permiso nombre"
 
 }
