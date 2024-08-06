@@ -45,7 +45,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="dashboard-default.html">Menu Principal</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lista de Productos</li>
+                <li class="breadcrumb-item active" aria-current="page">Lista de Productossssss</li>
             </ol>
         </nav>
     </div>
