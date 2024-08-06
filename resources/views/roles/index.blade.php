@@ -9,7 +9,7 @@
                     <h1>{{ __('List roles') }}</h1>
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('roles.create') }}" class="btn btn-primary mb-3">{{ __('Create rol') }}</a>
+                    <a href="{{ route('roles.create') }}" class="btn btn-md btn-primary mb-3">{{ __('Create role') }}</a>
                     <table id="datatables-reponsive" class="table table-bordered table-striped">
                         <thead>
                             <tr>

@@ -228,6 +228,11 @@
     "List permissions": "Listar Permisos",
     "Create permission": "Crear Permiso",
     "Edit permission": "Editar Permiso",
-    "Permission name": "Permiso nombre"
+    "Permission name": "Permiso nombre",
+    "Roles": "Roles",
+    "Create role": "Crear rol",
+    "Edit role": "Editar rol",
+    "List roles": "Listar roles",
+    "Role name": "Rol nombre"
 
 }
