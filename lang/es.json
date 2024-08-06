@@ -223,6 +223,8 @@
     "Email": "Correo electónico",
     "Username": "Usuario",
     "Password": "Contraseña",
-    "Sign in to your account to continue": "Ingresar en su cuenta para continuar"
+    "Sign in to your account to continue": "Ingresar en su cuenta para continuar",
+    "Permissions": "Permisos",
+    "List permissions": "Listar Permisos"
 
 }

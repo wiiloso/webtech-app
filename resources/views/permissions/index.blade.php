@@ -1,43 +1,54 @@
 <x-master-layout>
     <div class="header">
         <h1 class="header-title">
-            WebTech APP
+            {{ __('Permissions') }}
         </h1>
-        <p class="header-subtitle">{{ __('List permissions') }}</p>
     </div>
     <div class="row">
-        <div class="container col-6 m-2">
-            <h1>Permisos</h1>
-            <a href="{{ route('permissions.create') }}" class="btn btn-primary mb-3">Crear Permiso</a>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($permissions as $permission)
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1>{{ __('List permissions') }}</h1>
+                </div>
+                <div class="card-body">
+                    <a href="{{ route('permissions.create') }}" class="btn btn-md btn-primary mb-4">{{ __('Create permission') }}</a>
+
+                    <table id="datatables-reponsive" class="table table-bordered table-striped">
+                        <thead>
                             <tr>
-                                <td>{{ $permission->id }}</td>
-                                <td>{{ $permission->name }}</td>
-                                <td>
-                                    <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-sm btn-warning">Editar</a>
-                                    <form action="{{ route('permissions.destroy', $permission->id) }}" method="POST"
-                                        style="display:inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                                    </form>
-                                </td>
+                                <th>{{ __('ID') }}</th>
+                                <th>{{ __('Name') }}</th>
+                                <th>{{ __('Actions') }}</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($permissions as $permission)
+                                <tr>
+                                    <td>{{ $permission->id }}</td>
+                                    <td>{{ $permission->name }}</td>
+                                    <td>
+                                        <a href="{{ route('permissions.edit', $permission->id) }}"
+                                            class="btn btn-md btn-warning">Editar</a>
+                                        <form action="{{ route('permissions.destroy', $permission->id) }}"
+                                            method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-md btn-danger">Eliminar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            {{ $permissions->links('vendor.pagination.bootstrap-4') }} <!-- Enlaces de paginación con estilos de Bootstrap 4 -->
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            $("#datatables-reponsive").DataTable({
+                responsive: true
+            });
+        });
+    </script>
 </x-master-layout>

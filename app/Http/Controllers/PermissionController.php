@@ -14,7 +14,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::paginate(5); // Cambia 10 por el número de elementos por página que desees
+        // $permissions = Permission::paginate(10); 
+        $permissions = Permission::all();
         return view('permissions.index', compact('permissions'));
     }
 
