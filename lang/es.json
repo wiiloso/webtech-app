@@ -223,6 +223,8 @@
     "Email": "Correo electónico",
     "Username": "Usuario",
     "Password": "Contraseña",
+    "Repeat password": "Repetir Contraseña",
+    "Leave blank to keep the current one": "dejar en blanco para mantener la actual",
     "Sign in to your account to continue": "Ingresar en su cuenta para continuar",
     "Permissions": "Permisos",
     "List permissions": "Listar Permisos",
@@ -233,6 +235,11 @@
     "Create role": "Crear rol",
     "Edit role": "Editar rol",
     "List roles": "Listar roles",
-    "Role name": "Rol nombre"
+    "Role name": "Rol nombre",
+    "Users": "Usuarios",
+    "Create user": "Crear usuario",
+    "Edit user": "Editar usuario",
+    "List users": "Listar usuarios",
+    "Full name": "Nombre completo"
 
 }
