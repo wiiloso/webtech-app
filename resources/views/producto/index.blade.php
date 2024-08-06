@@ -64,12 +64,14 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
+                                <th>detalle</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($productos as $producto)
                                 <tr>
                                     <td>{{ $producto->pro_nombre }}</td>
+                                    <td>{{ $producto->pro_detalle }}</td>
                                     {{-- <td>{{ $producto->nombre }}</td>
                                     <td>{{ $producto->descripcion }}</td>
                                     <td>{{ $producto->precio }}</td> --}}
