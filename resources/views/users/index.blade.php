@@ -17,9 +17,8 @@
                 </div>
                 <div class="card-body">
                     @can('create user')
-                        <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">Crear Usuario</a>
+                        <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">{{ __('Create user') }}</a>
                     @endcan
-                    @can('view users')
                         <table id="datatables-responsive" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
@@ -55,7 +54,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    @endcan
                 </div>
             </div>
         </div>
