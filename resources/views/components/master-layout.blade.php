@@ -37,10 +37,10 @@
                     <small></small>
                 </div>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-header">
+                    <li class="sidebar-item active">
                         <a href="{{ route('dashboard') }}">
                             <i class="fas fa-fw fa-home"></i>
-                            {{ __('Home') }}
+                            <span class="aling-middle">{{ __('Home') }}</span>
                         </a>
                     </li>
                     <li class="sidebar-item active">
@@ -76,7 +76,7 @@
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <!-- Agregar show para desplegar el menu -->
                             <li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Productos</a>
+                            <li class="sidebar-item"><a class="sidebar-link" href="{{ route('producto.index') }}">Productos</a>
                             </li>
                         </ul>
                     </li>

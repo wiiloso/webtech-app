@@ -1,6 +1,12 @@
 <x-master-layout>
     <div class="header">
         <h1 class="header-title">{{ __('Users') }}</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">{{ __('Main menu') }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ __('Create user') }}</li>
+            </ol>
+        </nav>
     </div>
     <div class="row">
         <div-col-12>
