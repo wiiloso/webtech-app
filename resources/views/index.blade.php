@@ -13,7 +13,6 @@
                         <div class="col mt-0">
                             <h5 class="card-title"></h5>
                         </div>
-
                         <div class="col-auto">
                             <div class="avatar">
                                 <div class="avatar-title rounded-circle bg-primary-dark">
@@ -25,7 +24,6 @@
                     <h1 class="display-5 mt-1 mb-3 font-weight-bold">Productos</h1>
                     <div class="mb-0">
                         <span class="text-danger"> <a href="{{ route('producto.index') }}">Lista Productos</a></span>
-
                     </div>
                 </div>
             </div>
@@ -37,7 +35,6 @@
                         <div class="col mt-0">
                             <h5 class="card-title"></h5>
                         </div>
-
                         <div class="col-auto">
                             <div class="avatar">
                                 <div class="avatar-title rounded-circle bg-success-dark">
@@ -49,19 +46,13 @@
                     <h1 class="display-5 mt-1 mb-3">Entrada Productos</h1>
                     <div class="mb-0">
                         <span class="text-danger"> <a href="#">Lista Productos Entrada</a></span>
-
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-lg-3 col-xl">
-
         </div>
         <div class="col-md-6 col-lg-3 col-xl">
-
         </div>
     </div>
-
-
-
 </x-master-layout>

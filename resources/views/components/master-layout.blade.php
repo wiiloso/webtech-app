@@ -37,16 +37,16 @@
                     <small></small>
                 </div>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-item active">
-                        <a href="{{ route('dashboard') }}">
-                            <i class="fas fa-fw fa-home"></i>
-                            <span class="aling-middle">{{ __('Home') }}</span>
+                    <li class="active">
+                        <a href="{{ route('dashboard') }}" class="sidebar-link collapsed">
+                            <i class="align-middle me-2 fas fa-fw fa-home"></i>
+                            <span class="align-middle">{{ __('Menu Principal') }}</span>
                         </a>
                     </li>
-                    <li class="sidebar-item active">
+                    <li class="active">
                         <a data-bs-target="#dashboards" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                            <i class="align-middle me-2 fas fa-fw fa-home"></i>
-                            <span class="align-middle">{{ __('Administration') }}</span>
+                            <i class="align-middle me-2 fas fa-fw fa-book"></i>
+                            <span class="align-middle">{{ __('Administración') }}</span>
                         </a>
                         <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             @auth
@@ -62,25 +62,28 @@
                                 @endcan
                                 @can('view users')
                                     <li class="sidebar-item">
-                                        <a class="sidebar-link" href="{{ route('users.index') }}">Usuarios</a>
+                                        <li class="sidebar-item"><a class="sidebar-link" href="{{ route('users.index') }}">Usuarios</a>
                                     </li>
                                 @endcan
                             @endauth
                         </ul>
                     </li>
-                    <li class="sidebar-item active">
+                    <li class="active">
                         <a data-bs-target="#pages" data-bs-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle me-2 fas fa-fw fa-file"></i> <span
-                                class="align-middle">Paginas</span>
+                                class="align-middle fw-bold">Paginas</span>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <!-- Agregar show para desplegar el menu -->
-                            <li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="{{ route('producto.index') }}">Productos</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="#">Categorias</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Productos</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Proveedores</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Sub-Categorias</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="sidebar-item active">
+                    <li class="active">
                         <a data-bs-target="#auth" data-bs-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle me-2 fas fa-fw fa-sign-in-alt"></i> <span
                                 class="align-middle">{{ __('Autorization') }}</span>
@@ -106,9 +109,9 @@
                 <a class="sidebar-toggle d-flex me-2">
                     <i class="hamburger align-self-center"></i>
                 </a>
-                <form class="d-none d-sm-inline-block">
+                {{-- <form class="d-none d-sm-inline-block">
                     <input class="form-control form-control-lite" type="text" placeholder="Search projects...">
-                </form>
+                </form> --}}
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav ms-auto">
                         {{-- <li class="nav-item dropdown ms-lg-2">

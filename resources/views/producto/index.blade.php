@@ -1,50 +1,11 @@
 <x-master-layout>
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center">Listado de productos</h1>
-                <a href="{{ route('productos.create') }}" class="btn btn-primary">Crear producto</a>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($productos as $producto)
-                            <tr>
-                                <td>{{ $producto->id }}</td>
-                                <td>{{ $producto->nombre }}</td>
-                                <td>{{ $producto->descripcion }}</td>
-                                <td>{{ $producto->precio }}</td>
-                                <td>
-                                    <a href="{{ route('productos.show', $producto) }}" class="btn btn-info">Ver</a>
-                                    <a href="{{ route('productos.edit', $producto) }}" class="btn btn-warning">Editar</a>
-                                    <form action="{{ route('productos.destroy', $producto) }}" method="POST" class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div> --}}
-
-    <div class="header">
+  <div class="header">
         <h1 class="header-title">
             Lista de Productos
         </h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard-default.html">Menu Principal</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Menu Principal</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Lista de Productos</li>
             </ol>
         </nav>
@@ -54,36 +15,39 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Responsive DataTables</h5>
-                    <h6 class="card-subtitle text-muted">Highly flexible tool that many advanced features to any HTML table. See official
-                        documentation <a href="https://datatables.net/extensions/responsive/" target="_blank"
-                            rel="noopener noreferrer nofollow">here</a>.</h6>
+                    <button class="btn btn-outline-primary btn-lg">Agregar Producto<i class="align-middle fas fa-fw fa-plus"></i></button>
                 </div>
                 <div class="card-body">
-                    <table id="datatables-reponsive" class="table table-bordered table-striped" style="width:100%">
+                    <table id="datatables-reponsive" class="table table-bordered table-striped table-sm" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>detalle</th>
+                                <th>Nombre Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Costo Unitario</th>
+                                <td></td>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($productos as $producto)
                                 <tr>
-                                    <td>{{ $producto->pro_nombre }}</td>
-                                    <td>{{ $producto->pro_detalle }}</td>
-                                    {{-- <td>{{ $producto->nombre }}</td>
-                                    <td>{{ $producto->descripcion }}</td>
-                                    <td>{{ $producto->precio }}</td> --}}
-                                    {{-- <td> --}}
-                                        {{-- <a href="{{ route('productos.show', $producto) }}" class="btn btn-info">Ver</a>
+                                    <td>{{ $producto->pro_nombre_producto }}</td>
+                                    <td>{{ $producto->pro_cantidad }}</td>
+                                    <td>{{ $producto->pro_precio }}</td>
+                                    <td>{{ $producto->pro_costo_unitario }}</td>
+
+                                        <td class="table-action">
+                                            <a href="#"><i class="align-middle fas fa-fw fa-pen text-success"></i></i></a>
+                                            <a href="#"><i class="align-middle fas fa-fw fa-trash text-danger"></i></a>
+                                        </td>
+                                        {{-- <a href="@" class="btn btn-info">Ver</a>
                                         <a href="{{ route('productos.edit', $producto) }}" class="btn btn-warning">Editar</a>
                                         <form action="{{ route('productos.destroy', $producto) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Eliminar</button>
                                         </form> --}}
-                                    {{-- </td> --}}
+                                  </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -100,6 +64,4 @@
 			});
 		});
 	</script>
-
 </x-master-layout>
-

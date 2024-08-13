@@ -1,6 +1,6 @@
 <x-master-layout>
     <div class="header">
-        <h1 class="header-title">{{ __('Master Layout') }}</h1>
+        <h1 class="header-title">{{ __('Menu Principal') }}</h1>
     </div>
     <div class="row">
         {{-- Start block usuarios --}}
@@ -109,7 +109,6 @@
                         <div class="col mt-0">
                             <h5 class="card-title"></h5>
                         </div>
-
                         <div class="col-auto">
                             <div class="avatar">
                                 <div class="avatar-title rounded-circle bg-success-dark">

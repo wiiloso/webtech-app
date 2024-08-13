@@ -10,16 +10,12 @@ class Producto extends Model
     use HasFactory;
    
     protected $fillable = 
-    ['pro_id', 
-    'pro_nombre', 
-    'pro_abreviatura', 
-    'pro_marca', 
+    ['id_pro', 
+    'pro_nombre_producto', 
+    'pro_cantidad', 
     'pro_precio', 
     'pro_costo_unitario', 
-    'pro_detalle', 
-    'pro_cantidad', 
     'pro_destino', 
     'pro_estado', 
-    'cat_id', 
-    'prve_id'];
+    'sbc_id'];
 }
