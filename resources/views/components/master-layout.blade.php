@@ -71,34 +71,35 @@
                     <li class="active">
                         <a data-bs-target="#pages" data-bs-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle me-2 fas fa-fw fa-file"></i> <span
-                                class="align-middle fw-bold">Paginas</span>
+                                class="align-middle fw-bold">Páginas</span>
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <!-- Agregar show para desplegar el menu -->
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="#">Categorias</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('categoria.index') }}">Categorias</a>
                             <li class="sidebar-item fw-bold"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('compra.index') }}">Compra</a>
                             <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Productos</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Proveedores</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Sub-Categorias</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('proveedor.index') }}">Proveedores</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('subcategoria.index') }}">Sub-Categorias</a>
                             </li>
                         </ul>
                     </li>
                     <li class="active">
                         <a data-bs-target="#auth" data-bs-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle me-2 fas fa-fw fa-sign-in-alt"></i> <span
-                                class="align-middle">{{ __('Autorization') }}</span>
+                                class="align-middle">{{ __('Autorización') }}</span>
                         </a>
                         <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Sign
                                     In</a></li>
-                            <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Sign
+                            {{-- <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Sign
                                     Up</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="pages-reset-password.html">Reset
                                     Password</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="pages-404.html">404
                                     Page</a></li>
                             <li class="sidebar-item"><a class="sidebar-link" href="pages-500.html">500
-                                    Page</a></li>
+                                    Page</a></li> --}}
                         </ul>
                     </li>
                 </ul>
