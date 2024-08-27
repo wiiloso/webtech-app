@@ -9,14 +9,15 @@ class Proveedor extends Model
 {
     use HasFactory;
 
-    protected $fillable = 
-    ['id_prov', 
-    'prov_nombre_proveedor', 
-    'prov_direccion', 
-    'prov_telefono', 
-    'prov_codigo_postal', 
-    'prov_pagina_web', 
-    'prov_fechacreacion', 
-    'prov_estado', 
-];  
+    protected $fillable =
+    [
+        'id_prov',
+        'prov_nombre_proveedor',
+        'prov_direccion',
+        'prov_telefono',
+        'prov_codigo_postal',
+        'prov_pagina_web',
+        'prov_fechacreacion',
+        'prov_estado',
+    ];
 }

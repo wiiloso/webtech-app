@@ -62,7 +62,8 @@
                                 @endcan
                                 @can('view users')
                                     <li class="sidebar-item">
-                                        <li class="sidebar-item"><a class="sidebar-link" href="{{ route('users.index') }}">Usuarios</a>
+                                    <li class="sidebar-item"><a class="sidebar-link"
+                                            href="{{ route('users.index') }}">Usuarios</a>
                                     </li>
                                 @endcan
                             @endauth
@@ -75,12 +76,18 @@
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <!-- Agregar show para desplegar el menu -->
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('categoria.index') }}">Categorias</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="pages-clients.html">Clientes</a></li>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('compra.index') }}">Compra</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('producto.index') }}">Productos</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('proveedor.index') }}">Proveedores</a>
-                            <li class="sidebar-item fw-bold"><a class="sidebar-link" href="{{ route('subcategoria.index') }}">Sub-Categorias</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('categoria.index') }}">Categorias</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('clientes.index') }}">Clientes</a></li>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('compra.index') }}">Compra</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('producto.index') }}">Productos</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('proveedor.index') }}">Proveedores</a>
+                            <li class="sidebar-item fw-bold"><a class="sidebar-link"
+                                    href="{{ route('subcategoria.index') }}">Sub-Categorias</a>
                             </li>
                         </ul>
                     </li>

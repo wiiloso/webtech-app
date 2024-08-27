@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CompraController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('users', UserController::class);
+    Route::resource('clientes', ClienteController::class);
     // Route::get('/users', [UserController::class, 'index'])->name('users.index');
     // Route::resource('users', UserController::class);
 });
@@ -56,6 +58,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/producto/index', [ProductoController::class, 'index'])->name('producto.index');
     Route::get('/proveedor/index', [ProveedorController::class, 'index'])->name('proveedor.index');
     Route::get('/subcategoria/index', [SubCategoriaController::class, 'index'])->name('subcategoria.index');
+    Route::resource('/clientes', ClienteController::class);
+    // Route::get('/cliente', [ClienteController::class, 'test'])->name('clientes.test');
 });
 
 require __DIR__ . '/auth.php';
