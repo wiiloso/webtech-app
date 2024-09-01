@@ -1,10 +1,10 @@
 <x-master-layout>
     <div class="header">
-        <h1 class="header-title">{{ __('Roles') }}</h1>
+        <h1 class="header-title">{{ __('Lista de Roles') }}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">{{ __('Main menu') }}</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ __('List roles') }}</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">{{ __('Menú Principal') }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ __('Lista Roles') }}</li>
             </ol>
         </nav>
     </div>
@@ -12,15 +12,15 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h1>{{ __('List roles') }}</h1>
+                    {{-- <h1>{{ __('Lista roles') }}</h1> --}}
                 </div>
                 <div class="card-body">
-                    <a href="{{ route('roles.create') }}" class="btn btn-md btn-primary mb-3">{{ __('Create role') }}</a>
-                    <table id="datatables-reponsive" class="table table-bordered table-striped">
+                    <a href="{{ route('roles.create') }}" class="btn btn-outline-primary btn-lg mb-4">{{ __('Crear Rol') }}<i class="align-middle fas fa-fw fa-plus"></i></a>
+                    <table id="datatables-reponsive" class="table table-bordered table-striped table-sm">
                         <thead>
                             <tr>
                                 <th>{{ __('ID') }}</th>
-                                <th>{{ __('Rol name') }}</th>
+                                <th>{{ __('Nombre Rol') }}</th>
                                 <th>{{ __('Actions') }}</th>
                             </tr>
                         </thead>

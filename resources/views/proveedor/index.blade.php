@@ -14,7 +14,7 @@
           <div class="col-12">
               <div class="card">
                   <div class="card-header">
-                      <button class="btn btn-outline-primary btn-lg mt-3">Agregar Proveedor<i class="align-middle fas fa-fw fa-plus"></i></button>
+                      <button class="btn btn-outline-primary btn-lg">Agregar Proveedor<i class="align-middle fas fa-fw fa-plus"></i></button>
                   </div>
                   <div class="card-body">
                       <table id="datatables-reponsive" class="table table-bordered table-striped table-sm" style="width:100%">
@@ -40,6 +40,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
+                            </tbody>
                       </table>
                   </div>
               </div>

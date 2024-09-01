@@ -1,12 +1,12 @@
 <x-master-layout>
     <div class="header">
         <h1 class="header-title">
-            Compra
+            Entrada Productos
         </h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Menu Principal</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Compra</li>
+                <li class="breadcrumb-item active" aria-current="page">Entrada</li>
             </ol>
         </nav>
     </div>
@@ -84,7 +84,7 @@
             <div class="card">
                 <div class="card-body m-sm-3 m-md-3">
                     <div class="mb-2">
-                        <h3>Nueva Compra</h3>
+                        <h3>Nueva Entrada</h3>
                         <br>
                         <h4>Tipo Pago:</h4>
                     </div>
@@ -92,10 +92,10 @@
                         <div class="col-md-4 col-sm-offset-8">
                             <label for="ddl_tipo" class="form-label font-weight-bold">Pago:</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected>-- Seleccione --</option>
+                                <option value="1">Efectivo</option>
+                                <option value="2">Contado</option>
+                                <option value="3">Tarjeta</option>
                               </select>
                             <div class="form-text">
 
@@ -110,10 +110,10 @@
                         <div class="col-md-4 col-sm-offset-8">
                             <label for="ddl_tipo" class="form-label font-weight-bold">Proveedor:</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected>-- Seleccione --</option>
+                                <option value="1">Proveedor 1</option>
+                                <option value="2">Proveedor 2</option>
+                                <option value="3">Proveedor 3</option>
                               </select>
                             <div class="form-text">
                                 {{-- <asp:Label ID="lblmesaggetipo" runat="server" CssClass="text-danger" Text=""></asp:Label> --}}
@@ -156,7 +156,7 @@
                         <div class="col-md-4">
                             <label for="ddl_tipo" class="form-label font-weight-bold">Categoria productos:</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>-- Seleccione --</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -167,7 +167,7 @@
                         <div class="col-md-4">
                             <label for="ddl_tipo" class="form-label font-weight-bold">Sub-categoria productos:</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>-- Seleccione --</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -178,7 +178,7 @@
                         <div class="col-md-4">
                             <label for="ddl_tipo" class="form-label font-weight-bold">Productos:</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>-- Seleccione --</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>

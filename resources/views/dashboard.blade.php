@@ -115,7 +115,7 @@
                             <div class="accordion-body">
                                 <div class="list-group">                                 
                                     <a href="{{ route('users.index') }}" 
-                                       class="list-group-item list-group-item-action list-group-item-light">{{ __('Usuarios') }}</a>
+                                       class="list-group-item list-group-item-action list-group-item-light">{{ __('List users') }}</a>
                                     <a href="{{ route('roles.index') }}" 
                                        class="list-group-item list-group-item-action list-group-item-light">{{ __('Roles') }}</a>
                                     <a href="{{ route('permissions.index') }}" 
@@ -149,7 +149,7 @@
                                 {{-- <a href="#" class="list-group-item list-group-item-action list-group-item-light">Sub-Categorias</a>     --}}
                                 <a href="{{ route('producto.index') }}" 
                                    class="list-group-item list-group-item-action list-group-item-light">Productos</a>
-                                <a href="#" class="list-group-item list-group-item-action list-group-item-light">Entrada</a>
+                                <a href="{{ route('compra.index') }}" class="list-group-item list-group-item-action list-group-item-light">Entrada</a>
                                 <a href="#" class="list-group-item list-group-item-action list-group-item-light">Salida</a>
                                 </div>
                             </div>
