@@ -1,0 +1,59 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <!-- Page Header -->
+        <div class="page-header invoices-page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <ul class="breadcrumb invoices-breadcrumb">
+                        <li class="breadcrumb-item invoices-breadcrumb-item">
+                            <a [routerLink]="routes.listadoCategorias">
+                                <i class="fa fa-chevron-left"></i> Regresar a la lista Categoria
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Crear Categoria</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="blogtitle">Categoria <span class="login-danger">*</span></label>
+                                        <input name="cat_nombre" class="form-control" type="text" placeholder="Escriba una categoria" 
+                                        formControlName="cat_nombre"/>
+                                        <div *ngIf="form.get('cat_nombre').invalid && form.get('cat_nombre').touched">
+                                            <small *ngIf="form.get('cat_nombre').hasError('cat_nombre')" style="color: red">Los nombres son requeridos</small>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="doctor-submit">
+                                        <button type="submit" class="btn btn-primary submit-form me-2" [disabled]="form.invalid">
+                                            Guardar Categoria +
+                                        </button>
+                                        <!-- <button type="submit" class="btn btn-primary submit-form me-2">
+                                            Guardar Categoria +
+                                        </button> -->
+                                    </div>
+                                    <!-- <div class="alert alert-danger mt-2 w-50" role="alert">
+                                        A simple danger alert—check it out!
+                                    </div> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

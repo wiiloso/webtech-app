@@ -1,0 +1,109 @@
+<div class="page-wrapper">
+  <div class="content">
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a>Menu Principal </a></li>
+            <li class="breadcrumb-item">
+              <i class="feather icon-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item active">Rutas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /Page Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card card-table show-entire">
+          <div class="card-body">
+            <!-- Table Header -->
+            <div class="page-table-header mb-2">
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="doctor-table-blk">
+                    <h3>Encontrar mejor ruta</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Table Header -->
+            <div class="staff-search-table">
+              <!-- <form [formGroup]="frm_ruta" novalidate (ngSubmit)="mejorRuta()"> -->
+              <div class="row">
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="form-group local-forms">
+                    <label for="leave">Ruta Entrada </label>
+                    <mat-select
+                      [(ngModel)]="entrada"
+                      name="entrada"
+                      id="entrada"
+                      class="form-control"
+                      placeholder="Seleccione un destino"
+                    >
+                      <mat-option value="">Seleccione una entrada</mat-option>
+                      <mat-option value="E">Entrada E</mat-option>
+                      <mat-option value="D">Entrada D</mat-option>
+                      <mat-option value="K">Entrada K</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="form-group local-forms">
+                    <label for="leave">Ruta Salida </label>
+
+                    <mat-select
+                      [(ngModel)]="destino"
+                      name="destino"
+                      id="destino"
+                      class="form-control select"
+                      placeholder="Seleccione un destino"
+                    >
+                      <mat-option
+                        *ngFor="let producto of listaProductos"
+                        [value]="producto.pro_destino"
+                      >
+                        {{ producto.pro_destino }} -
+                        {{ producto.pro_detalle }}
+                      </mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                  <div class="doctor-submit">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-primary"
+                      (click)="mejorRuta()"
+                    >
+                      Buscar mejor ruta
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- </form> -->
+            </div>
+            <div class="table-responsive">
+              <article class="blog blog-single-post">
+                <div class="blog-info clearfix">
+                  <div class="post-right read-blks">
+                    <a href="javascript:void(0);">Mejor Ruta</a>
+                  </div>
+                </div>
+                <div class="blog-content text-center">
+                  <img
+                    id="imgrobot"
+                    [src]="thumbnail"
+                    alt="Image description"
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

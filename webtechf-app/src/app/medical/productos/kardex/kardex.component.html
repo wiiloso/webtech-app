@@ -1,0 +1,117 @@
+<div class="page-wrapper">
+    <div class="content">
+  
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="routes.adminDashboard">Menu Principal </a></li>
+              <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
+              <li class="breadcrumb-item active">Kardex</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Header -->
+  
+      <div class="row">
+        <div class="col-sm-12">
+  
+          <div class="card card-table show-entire">
+            <div class="card-body">
+                 <!-- Table Header -->
+              <div class="page-table-header mb-2">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <div class="doctor-table-blk">
+                      <h3>Buscar Información</h3>
+                      <div class="doctor-search-blk">
+                        <div class="top-nav-search table-search-blk">
+                          <input class="form-control" placeholder="Buscar Categoria..." matInput (keyup)="applyFilter($event)" />
+                          <a class="btn"><img src="assets/img/icons/search-normal.svg" alt=""></a>
+                        </div>
+                        <div class="add-group">
+                          <a [routerLink]="routes.CrearCategorias" class="btn btn-primary add-pluss ms-2"><img
+                              src="assets/img/icons/plus.svg" alt=""></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Table Header -->
+              <div class="staff-search-table">
+                <form>
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-xl-4">
+                      <div class="doctor-submit">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- displayedColumnsKardex: string[] = ['index', 'Categoria', 'Subcategoria', 'Codigo', 'Producto', 'Unidad de Medida', 'Entradas', 'Salidas', 'Stock']; -->
+              <div class="table-responsive small">
+                <div class="mat-elevation-z8 small">
+                  <table mat-table [dataSource]="dataSourceKardex" matSort
+                    class="table border-0 custom-table comman-table datatable mb-0 table-sm">
+                    <ng-container matColumnDef="index">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+                      <td mat-cell *matCellDef="let element let i = index;" class="profile-image">{{i + 1}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Categoria">
+                      <th mat-header-cell *matHeaderCellDef class="status-green" mat-sort-header> Categoria </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image"><a [routerLink]="routes.invoiceView"
+                          [routerLink]="routes.profile">{{element.Cateria}}</a></td>
+                    </ng-container>
+                    <ng-container matColumnDef="Subcategoria">
+                      <th mat-header-cell *matHeaderCellDef class="status-green" mat-sort-header> Subcategoria </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image"><a [routerLink]="routes.invoiceView"
+                          [routerLink]="routes.profile">{{element.Subcateria}}</a></td>
+                    </ng-container>
+                    <ng-container matColumnDef="Codigo">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Código </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Codi}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Producto">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Producto </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Producto}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Unidad de Medida">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Unidad de Medida </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Unid_Med}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Entradas">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Entradas </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Entradas}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Salidas">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Salidas </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Salidas}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="Stock">
+                      <th mat-header-cell *matHeaderCellDef class="text-center">Stock </th>
+                      <td mat-cell *matCellDef="let element" class="profile-image text-center">{{element.Stock}}</td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsKardex"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsKardex; let i = index;"></tr>
+                  </table>
+                  <mat-paginator class="page-link" [pageSizeOptions]="[7, 14, 21]" showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+                  </mat-paginator>
+                </div>
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

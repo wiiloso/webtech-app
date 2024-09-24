@@ -1,0 +1,295 @@
+<div class="page-wrapper">
+  <div class="content">
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a [routerLink]="routes.adminDashboard">Dashboard </a>
+            </li>
+            <li class="breadcrumb-item">
+              <i class="feather icon-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item active">Salida de productos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /Page Header -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card-box">
+          <h4 class="card-title">Buscar cliente</h4>
+          <form action="#" (ngSubmit)="buscarCliente()">
+            <div class="form-group row">
+              <div class="col-md-10">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">No. Cedula</span>
+                  </div>
+                  <input
+                    class="form-control"
+                    type="text"
+                    [(ngModel)]="busca_cliente"
+                    id="busca_cliente"
+                    name="busca_cliente"
+                    placeholder="Ingrese el número de cedula"
+                  />
+                  <button class="btn btn-primary" type="submit">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card-box">
+          <h4 class="card-title">Buscar producto</h4>
+          <form (ngSubmit)="buscarProducto()">
+            <div class="form-group row">
+              <div class="col-md-10">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Código</span>
+                  </div>
+                  <input
+                    class="form-control"
+                    type="text"
+                    [(ngModel)]="busqueda"
+                    id="busqueda"
+                    name="busqueda"
+                    placeholder="Ingrese el código del producto"
+                  />
+                  <button class="btn btn-primary" type="submit">Buscar</button>
+                </div>
+              </div>
+              <ng-template #noProducto>
+                <p>No se encontraron productos con la búsqueda ingresada.</p>
+              </ng-template>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="mostrarProducto">
+      <div class="col-lg-12">
+        <div class="card-box">
+          <h4 class="card-title">Producto seleccionado</h4>
+          <table
+            class="table table-responsive table-stripped"
+            id="busca_producto"
+          >
+            <thead class="table table-bordered">
+              <th>Nombre</th>
+              <th>Costo unidad</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+            </thead>
+            <tbody class="table table-bordered">
+              <tr *ngFor="let producto of listaProductos">
+                <td>{{ producto["pro_detalle"] }}</td>
+                <!-- Precio:
+                          {{ producto["pro_precio"]. }} -->
+                <td>{{ producto["pro_costo_unitario"] }}</td>
+                <td>
+                  {{ producto["pro_costo_unitario"] }}
+                </td>
+                <td class="col-sm-3">
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      [(ngModel)]="cantidad"
+                      id="cantidad"
+                      name="cantidad"
+                      required="true"
+                    />
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      (click)="agregarProducto(producto, cantidad)"
+                    >
+                      Agregar
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <form class="form-control">
+      <div class="row" id="impresion">
+        <div class="col-lg-12">
+          <div class="car-box" *ngIf="mostrarPersona">
+            <h4 class="card-title">Datos del cliente</h4>
+            <div *ngFor="let persona of listarPersona" class="row">
+              <div class="row mt-2">
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <input type="hidden" [value]="per_id" ngValue="per_id" />
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Nombres</span>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      [value]="nombres"
+                      ngValue="nombres"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Cedula </span>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      [value]="cedula"
+                      ngValue="cedula"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Dirección</span>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      [value]="direccion"
+                      ngValue="direccion"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Teléfono</span>
+                    </div>
+                    <input
+                      class="form-control"
+                      type="text"
+                      [value]="telefono"
+                      ngValue="telefono"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="">
+            <div class="card-box">
+              <h4 class="card-title text-center">Lista de productos</h4>
+              <table
+                class="table table-responsive table-stripped"
+                id="tbl_elejidos"
+              >
+                <thead>
+                  <th>Cantidad</th>
+                  <th>Descripción</th>
+                  <th>P. Unidad</th>
+                  <th>Total</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of productoelejido">
+                    <td>{{ item.cantidad }}</td>
+                    <td>{{ item.pro_detalle }}</td>
+                    <td>{{ item.pro_costo_unitario | currency }}</td>
+                    <td>{{ item.Total | currency }}</td>
+                    <td>
+                      <button
+                        class="btn btn-danger"
+                        (click)="eliminarProducto(item)"
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="4" class="text-end">SUBTOTAL</th>
+                    <th colspan="2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        formControlName="Sub_total"
+                        (blur)="calculos()"
+                        ngvalue="sub_total_pagar"
+                        readonly
+                        [value]="sub_total_pagar"
+                      />
+                    </th>
+                  </tr>
+                  <tr>
+                    <th colspan="4" class="text-end">SUBTOTAL IVA (15%)</th>
+                    <th colspan="2">
+                      <input
+                        type="text"
+                        class="form-control"
+                        formControlName="Sub_total_iva"
+                        ngValue="sub_total_iva"
+                        readonly
+                        [value]="sub_total_iva"
+                      />
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th colspan="4" class="text-end">IVA (15%)</th>
+                    <th colspan="2">
+                      <div class="form-group mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          formControlName="Valor_IVA"
+                          readonly
+                          value="0.15"
+                        />
+                      </div>
+                    </th>
+                  </tr>
+
+                  <tr>
+                    <th colspan="4" class="text-end">VALOR TOTAL</th>
+                    <th colspan="2">
+                      <div class="form-group mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          ngValue="total"
+                          readonly
+                          [value]="totalapagar"
+                        />
+                      </div>
+                    </th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="d-grid mt-3">
+              <button type="submit" class="btn btn-primary" (click)="grabar()">
+                Generar Salida de producto
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

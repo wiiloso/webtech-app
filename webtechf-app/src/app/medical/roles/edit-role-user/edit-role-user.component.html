@@ -1,0 +1,112 @@
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <!-- Page Header -->
+        <div class="page-header invoices-page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <ul class="breadcrumb invoices-breadcrumb">
+                        <li class="breadcrumb-item invoices-breadcrumb-item">
+                            <a [routerLink]="routes.listadoRole">
+                                <i class="fa fa-chevron-left"></i> Regresar a la Lista de Rol
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <div class="invoices-create-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Editar Rol</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="blogtitle">Rol <span class="login-danger">*</span></label>
+                                        <input class="form-control" name="name" type="text" [(ngModel)]="name" placeholder="Escriba un Rol" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="doctor-submit">
+                                        <button type="submit" class="btn btn-primary submit-form me-2" (click)="GuardarRol()">
+                                            Editar Rol 
+                                        </button>                                       
+                                    </div>  
+                                    <div class="mt-2 w-50" role="alert" *ngIf="validaform" [ngClass]="statusclass === 0 ? 'alert alert-danger' : 'alert alert-success'">
+                                      <span class="fw-bold"> {{ mensageform }}</span> 
+                                      </div>                               
+                                </div>                               
+                            </div>                         
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row justify-content-center">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <section>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Asignación de Permisos</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6 w-100">
+                                    <table class="table table-borderless table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <ng-container *ngFor="let side of sideBar">
+                                                <tr>
+                                                    <td>{{ side.menuValue }}</td>
+                                                    <td>
+                                                        <div *ngIf="side.subMenus && side.subMenus.length > 0">
+                                                            <ng-container *ngFor="let subMenu of side.subMenus">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input"  [checked]="permissions.includes(subMenu.permision)" type="checkbox" name="checkbox" (click)="addPermisson(subMenu)"
+                                                                           id="flexCheckDefault" /> {{ subMenu.menuValue }}
+                                                                </div>
+                                                            </ng-container>
+                                                        </div>
+                                                        <div *ngIf="side.subMenus && side.subMenus.length === 0">
+                                                           <label>
+                                                                <input type="checkbox" [checked]="permissions.includes(side.permision)" name="checkbox" class="form-check-input" value="" id="flexCheckDefault" (click)="addPermisson(side)" /> {{ side.menuValue }}
+                                                           </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </ng-container>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-12">
+                                    <!-- <div class="doctor-submit">
+                                        <button type="submit" class="btn btn-primary submit-form me-2">
+                                            Guardar Rol +
+                                        </button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
